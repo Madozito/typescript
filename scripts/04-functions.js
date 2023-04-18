@@ -23,3 +23,9 @@ function mostrarPais(pais, continente) {
     return resultado;
 }
 console.log(mostrarPais('España'));
+// Tipo Funcion
+let grupos;
+grupos = function (datos) {
+    return 'Mis grupos favoritos son: ' + datos.toString();
+};
+console.log(grupos(['Metalica', 'Beatles', 'a/ha']));
