@@ -15,6 +15,9 @@ class Car {
     //     this.on = false;
     //     this.speed = 0;
     // }
+    // public: it is accesible inside the class and outside them
+    // protected: you can acces only from the class of children classes
+    // private: only from this class
     constructor(model, type, year, color, on = false, speed = 0) {
         this.model = model;
         this.type = type;
@@ -32,7 +35,16 @@ class Car {
     stop() {
         this.on = false;
     }
+    showCar() {
+        return this.model + this.type;
+    }
+    showOther() {
+        return this.year + this.color;
+    }
+    showAll() {
+        return this.showCar + ' ' + this.showOther;
+    }
 }
-//let my_car: Car = new Car();
-//console.log(typeof my_car); //Output object
-//console.log(my_car.start()); //Output true
+let my_car = new Car('Renault', 'Clio', 2000, 'Blue');
+console.log(my_car.model, my_car.year); //Output object with all properties
+console.log(my_car.start()); //Output true
