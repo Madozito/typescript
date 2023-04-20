@@ -1,23 +1,6 @@
 "use strict";
 // Classes in TypeScript
 class Car {
-    // model:string;
-    // type:string;
-    // year:number;
-    // color:string;
-    // on:boolean;
-    // speed:number;
-    // constructor(){
-    //     this.model = 'Renault';
-    //     this.type = 'Clio';
-    //     this.year = 2000;
-    //     this.color = 'Rojo';
-    //     this.on = false;
-    //     this.speed = 0;
-    // }
-    // public: it is accesible inside the class and outside them
-    // protected: you can acces only from the class of children classes
-    // private: only from this class
     constructor(model, type, year, color, on = false, speed = 0) {
         this.model = model;
         this.type = type;
@@ -27,6 +10,7 @@ class Car {
         this.speed = speed;
         this.on = false;
         this.speed;
+        this.prueba = 'www.google.com';
     }
     // Methods
     start() {
@@ -76,10 +60,11 @@ class Van extends Car {
     }
 }
 let my_van = new Van('Jeep', 'Something', 1990, 'Black');
-console.log(my_van.show());
-// let my_car: Car = new Car('Renault', 'Clio', 2000, 'Blue');
-// console.log(my_car.model, my_car.year); //Output object with all properties
-// console.log(my_car.start()); //Output true
-// my_car.setColor = 'Violet'
-// console.log(my_car.getColor);
-// console.log(Car.greet());
+console.log(my_van);
+let my_car = new Car('Renault', 'Clio', 2000, 'Blue');
+// Abstract classes  other classes can inherit things, but you cannot use it or instance it, only extending to other classes
+console.log(my_car.model, my_car.year); //Output object with all properties
+console.log(my_car.start()); //Output true
+my_car.setColor = 'Violet';
+console.log(my_car.getColor);
+console.log(Car.greet());
