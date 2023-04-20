@@ -44,17 +44,24 @@ class Car {
     public stop(): void {
         this.on = false;
     }
-    
-    private showCar():string{
+
+    private showCar(): string {
         return this.model + this.type;
     }
 
-    private showOther():string{
+    private showOther(): string {
         return this.year + this.color;
     }
 
-    private showAll():string{
+    private showAll(): string {
         return this.showCar + ' ' + this.showOther;
+    }
+
+    public set setColor(color: string) {
+        this.color = color;
+    }
+    public get getColor() {
+        return this.color
     }
 }
 
@@ -62,3 +69,5 @@ let my_car: Car = new Car('Renault', 'Clio', 2000, 'Blue');
 
 console.log(my_car.model, my_car.year); //Output object with all properties
 console.log(my_car.start()); //Output true
+my_car.setColor = 'Violet'
+console.log(my_car.getColor);
