@@ -1,4 +1,4 @@
-# <p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TypeScript Logo" style="display: block; margin: 0 auto; margin-bottom: 40px;" width="100" height="100" /> TypeScript Fundamentals</p>
+# <p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TypeScript Logo" style="display: block; margin: 0 auto; margin-bottom: 40px; margin-top: 40pxx" width="100" height="100" /> TypeScript Fundamentals</p>
 
 
 <p align="center">
