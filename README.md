@@ -2,20 +2,22 @@
 
 
 <p align="center">
-    
+    TypeScript is a superset of JavaScript that adds static type checking, classes, and interfaces to the language. It can help catch errors early in the development process and make your code more readable and maintainable.
 </p>
 
 This repository is a collection of TypeScript examples that cover the fundamentals of the language. It is organized into seven parts:
 
-1. Basic types
-2. Union types
-3. Arrays
-4. Functions
-5. Objects
-6. Classes
-7. Interfaces
+## Table of Contents
 
-## :arrow_forward:  Basic Types
+1. [Basic Types](#basic-types)
+2. [Union Types](#union-types)
+3. [Arrays](#arrays)
+4. [Functions](#functions)
+5. [Objects](#objects)
+6. [Classes](#classes)
+7. [Interfaces](#interfaces)
+
+## :arrow_forward:  Basic Types <a name="basic-types"></a>
 
 In this section, we cover the basic types that TypeScript offers:
 
@@ -42,7 +44,7 @@ In this section, we cover the basic types that TypeScript offers:
  let unknw:unknown = "I am unknown"
 ```
 
-##  :arrow_forward: Union Types
+## :arrow_forward: Union Types <a name="union-types"></a>
 
 In this section, we cover how to use union types in TypeScript:
 
@@ -54,7 +56,7 @@ contact = 65453443;
 
 // Doing this you are able to assign other values later on just like in this example
 ```
-## :arrow_forward: Arrays
+## :arrow_forward: Arrays <a name="arrays"></a>
 
 In this section, we cover how to work with arrays in TypeScript:
 
@@ -72,7 +74,7 @@ years.push(2025);
 console.log(people, years);
 ```
 
-## :arrow_forward: Functions
+## :arrow_forward: Functions <a name="functions"></a>
 
 In this section, we cover how to create and use functions in TypeScript:
 
@@ -93,7 +95,7 @@ return result;
 console.log(showCountry("Uruguay"));
 ```
 
-## :arrow_forward: Objects
+## :arrow_forward: Objects <a name="objects"></a>
 
 In this section, we cover how to work with objects in TypeScript:
 
@@ -121,7 +123,7 @@ return this.name + this.sector
 console.log(GeneXus.show())
 ```
 
-## :arrow_forward: Classes
+## :arrow_forward: Classes <a name="classes"></a>
 
 In this section, we cover how to create and use classes in TypeScript:
 
@@ -158,7 +160,7 @@ class Van extends Car {
 
 ```
 
-## :arrow_forward: Interfaces
+## :arrow_forward: Interfaces <a name="interfaces"></a>
 
 In this section, we cover how to use interfaces in TypeScript:
 
