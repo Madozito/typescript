@@ -1,14 +1,14 @@
 // Tipos de datos basicos en TypeScript
 
-let texto:string = "Hola";
+let texto:string = "Hello";
 texto = "Adios";
 // Number es cualquier numero
 let numero:number = 10;
 numero = 12.5;
 console.log(numero);
 // Boolean
-let verdadero:boolean = true;
-verdadero = false;
+let trueValue:boolean = true;
+trueValue = false;
 // Tipo de dato comodin: any
 let normal:any = "lo que sea";
 normal = true;
