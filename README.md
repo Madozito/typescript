@@ -20,7 +20,7 @@ This repository is a collection of TypeScript examples that cover the fundamenta
 9. [Decorators](#decorators)
 10. [Generic Functions](#generic-functions)
 
-# 🚀 Installing TypeScript <a name="installation"></a>
+## 🚀 Installing TypeScript <a name="installation"></a>
 To get started with TypeScript, you'll need to install it on your machine. Here's how to do it:
 ## 📋 Prerequisites
 Before you can install TypeScript, you'll need to have <a href="https://nodejs.org/en">Node.js</a> installed on your machine.
@@ -55,7 +55,7 @@ To achieve this, you can uncomment these lines in your tsconfig.json:
 ```
 
 
-# :arrow_forward:  Basic Types <a name="basic-types"></a>
+## :arrow_forward:  Basic Types <a name="basic-types"></a>
 
 In this section, we cover the basic types that TypeScript offers:
 
@@ -82,7 +82,7 @@ In this section, we cover the basic types that TypeScript offers:
  let unknw:unknown = "I am unknown"
 ```
 
-# :arrow_forward: Union Types <a name="union-types"></a>
+## :arrow_forward: Union Types <a name="union-types"></a>
 
 In this section, we cover how to use union types in TypeScript:
 
@@ -94,7 +94,7 @@ contact = 65453443;
 
 // Doing this you are able to assign other values later on just like in this example
 ```
-# :arrow_forward: Arrays <a name="arrays"></a>
+## :arrow_forward: Arrays <a name="arrays"></a>
 
 In this section, we cover how to work with arrays in TypeScript:
 
@@ -112,7 +112,7 @@ years.push(2025);
 console.log(people, years);
 ```
 
-# :arrow_forward: Functions <a name="functions"></a>
+## :arrow_forward: Functions <a name="functions"></a>
 
 In this section, we cover how to create and use functions in TypeScript:
 
@@ -135,7 +135,7 @@ return result;
 console.log(showCountry("Uruguay"));
 ```
 
-# :arrow_forward: Objects <a name="objects"></a>
+## :arrow_forward: Objects <a name="objects"></a>
 
 In this section, we cover how to work with objects in TypeScript:
 
@@ -165,7 +165,7 @@ return this.name + this.sector
 console.log(GeneXus.show())
 ```
 
-# :arrow_forward: Classes <a name="classes"></a>
+## :arrow_forward: Classes <a name="classes"></a>
 
 In this section, we cover how to create and use classes in TypeScript:
 
@@ -210,7 +210,7 @@ class Van extends Car {
 
 ```
 
-# :arrow_forward: Interfaces <a name="interfaces"></a>
+## :arrow_forward: Interfaces <a name="interfaces"></a>
 
 In this section, we cover how to use interfaces in TypeScript:
 
@@ -257,7 +257,7 @@ class Fifa implements Videogame {
 
 ```
 
-# :arrow_forward: Decorators <a name="decorators"></a>
+## :arrow_forward: Decorators <a name="decorators"></a>
 In this section, we will cover what decorators are and how they can be used in TypeScript.
 
 Decorators are a special kind of declaration that can be attached to a class declaration, method, accessor, property, or parameter. They use the form `@expression`, where `expression` must evaluate to a function that will be called at runtime with information about the decorated declaration.
@@ -354,7 +354,7 @@ pc.on("You're in Juan's PC");
 
 
 ```
-# :arrow_forward: Generic Functions <a name="generic-functions"></a>
+## :arrow_forward: Generic Functions <a name="generic-functions"></a>
 
 Generic functions are functions that can work with a variety of data types. They are functions that are defined with one or more type parameters, which allows them to work with a wide range of data types, rather than being limited to a specific type.
 
