@@ -1,14 +1,14 @@
 "use strict";
 // Tipos de datos basicos en TypeScript
-let texto = "Hola";
+let texto = "Hello";
 texto = "Adios";
 // Number es cualquier numero
 let numero = 10;
 numero = 12.5;
 console.log(numero);
 // Boolean
-let verdadero = true;
-verdadero = false;
+let trueValue = true;
+trueValue = false;
 // Tipo de dato comodin: any
 let normal = "lo que sea";
 normal = true;
