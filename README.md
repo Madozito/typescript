@@ -5,19 +5,57 @@
     TypeScript is a superset of JavaScript that adds static type checking, classes, and interfaces to the language. It can help catch errors early in the development process and make your code more readable and maintainable.
 </p>
 
-This repository is a collection of TypeScript examples that cover the fundamentals of the language. It is organized into seven parts:
+This repository is a collection of TypeScript examples that cover the fundamentals of the language. It is organized into ten parts:
 
 ## Table of Contents
 
-1. [Basic Types](#basic-types)
-2. [Union Types](#union-types)
-3. [Arrays](#arrays)
-4. [Functions](#functions)
-5. [Objects](#objects)
-6. [Classes](#classes)
-7. [Interfaces](#interfaces)
+1. [Installation Guide](#installation)
+2. [Basic Types](#basic-types)
+3. [Union Types](#union-types)
+4. [Arrays](#arrays)
+5. [Functions](#functions)
+6. [Objects](#objects)
+7. [Classes](#classes)
+8. [Interfaces](#interfaces)
+9. [Decorators](#decorators)
+10. [Generic Functions](#generic-functions)
 
-## :arrow_forward:  Basic Types <a name="basic-types"></a>
+# 🚀 Installing TypeScript <a name="installation"></a>
+To get started with TypeScript, you'll need to install it on your machine. Here's how to do it:
+## 📋 Prerequisites
+Before you can install TypeScript, you'll need to have <a href="https://nodejs.org/en">Node.js</a> installed on your machine.
+## ⬇️ Installation
+Once you have Node.js installed, you can use npm to install TypeScript. Open your terminal and run the following command:
+```typescript
+npm install -g typescript
+```
+This will install TypeScript `globally` on your machine. If you don't want to install it globally, you can skip the `-g` flag and TypeScript will be installed locally in your current directory.
+## 🔍 Version Verification
+To verify that TypeScript has been installed correctly, you can run the following command:
+```typescript
+tsc --version
+```
+## 👀 Watching for Errors
+To see errors in your TypeScript code, you can use the `TypeScript compiler's watch mode`. To do this, navigate to your project directory in the terminal and run the following command:
+```typescript
+tsc -w
+```
+This will start the TypeScript compiler in watch mode, which will automatically recompile your TypeScript files whenever you make changes. If there are any errors in your code, they will be displayed in the terminal.
+
+## 📁 Directory Structure
+
+To get started with TypeScript, you'll need to create two directories in your project: `src` and `scripts`.
+
+The `src` directory will contain all of your TypeScript source files, and the `scripts` directory will contain the compiled JavaScript files.
+
+To achieve this, you can uncomment these lines in your tsconfig.json:
+```typescript
+"rootDir": "./src" /* Specify the root folder within your source files. */,
+"outDir": "./scripts" /* Specify an output folder for all emitted files. */,
+```
+
+
+# :arrow_forward:  Basic Types <a name="basic-types"></a>
 
 In this section, we cover the basic types that TypeScript offers:
 
@@ -44,7 +82,7 @@ In this section, we cover the basic types that TypeScript offers:
  let unknw:unknown = "I am unknown"
 ```
 
-## :arrow_forward: Union Types <a name="union-types"></a>
+# :arrow_forward: Union Types <a name="union-types"></a>
 
 In this section, we cover how to use union types in TypeScript:
 
@@ -56,7 +94,7 @@ contact = 65453443;
 
 // Doing this you are able to assign other values later on just like in this example
 ```
-## :arrow_forward: Arrays <a name="arrays"></a>
+# :arrow_forward: Arrays <a name="arrays"></a>
 
 In this section, we cover how to work with arrays in TypeScript:
 
@@ -74,9 +112,11 @@ years.push(2025);
 console.log(people, years);
 ```
 
-## :arrow_forward: Functions <a name="functions"></a>
+# :arrow_forward: Functions <a name="functions"></a>
 
 In this section, we cover how to create and use functions in TypeScript:
+
+TypeScript supports `optional` parameters and `default` values in functions.
 
 ```typescript
 // Parameters and Functions
@@ -95,9 +135,11 @@ return result;
 console.log(showCountry("Uruguay"));
 ```
 
-## :arrow_forward: Objects <a name="objects"></a>
+# :arrow_forward: Objects <a name="objects"></a>
 
 In this section, we cover how to work with objects in TypeScript:
+
+In TypeScript, objects are instances of a class or interface that contain properties and methods. Properties are key-value pairs that define the characteristics of the object, while methods are functions that perform actions on the object's properties.
 
 ```typescript
 // Here we define a type called Companies. 
@@ -123,9 +165,17 @@ return this.name + this.sector
 console.log(GeneXus.show())
 ```
 
-## :arrow_forward: Classes <a name="classes"></a>
+# :arrow_forward: Classes <a name="classes"></a>
 
 In this section, we cover how to create and use classes in TypeScript:
+
+Classes are an essential part of object-oriented programming (OOP), and TypeScript provides support for class-based OOP.
+
+## Defining a Class
+You can define a class in TypeScript using the `class` keyword followed by the name of the class
+
+## Inheritance
+In TypeScript, you can use the `extends` keyword to create a subclass that `inherits properties` and methods from a parent class:
 
 ```typescript
 // Parent class - Car
@@ -160,9 +210,11 @@ class Van extends Car {
 
 ```
 
-## :arrow_forward: Interfaces <a name="interfaces"></a>
+# :arrow_forward: Interfaces <a name="interfaces"></a>
 
 In this section, we cover how to use interfaces in TypeScript:
+
+In TypeScript, interfaces are used to define the structure of an object. They can be thought of as a contract that specifies what properties and methods an object must have.
 
 ```typescript
 // Interfaces in TypeScript
@@ -205,6 +257,127 @@ class Fifa implements Videogame {
 
 ```
 
+# :arrow_forward: Decorators <a name="decorators"></a>
+In this section, we will cover what decorators are and how they can be used in TypeScript.
+
+Decorators are a special kind of declaration that can be attached to a class declaration, method, accessor, property, or parameter. They use the form `@expression`, where `expression` must evaluate to a function that will be called at runtime with information about the decorated declaration.
+
+Decorators can be used to modify, observe, or replace existing class and member definitions, and they can also be used to annotate a class or member with metadata that can be used at runtime.
+```typescript
+function showMessage() {
+  console.log("Showing the movie");
+}
+
+function proyected(activate: boolean): any {
+   if (activate) {
+    return showMessage();
+   } else{
+     return null;
+   }
+}
+
+@proyected(true)
+// To make sure decorators work you need to go to your tsconfig.json and activate: "experimentalDecoratos = true"
+// And "emitDecoratorMetadata": true,
+class Movie {
+  constructor(
+    public title: string,
+    public genre: string,
+    public proyected: boolean
+  ) {}
+}
+
+let batman:any = new Movie("Batman Begins", "Accion", false);
+batman.doProyection();
+
+
+```
+## :arrow_forward: Method Decorators <a name="method-decorators"></a>
+
+Method decorators are similar to class decorators in that they can be used to modify the behavior of a method. 
+
+Method decorators are applied to the method definition and can be used to modify the method's behavior, such as by logging when the method is called or by modifying the arguments that are passed to the method. 
+
+To create a method decorator, you can define a function that takes three arguments: the `target object`, the `method name`, and the `method descriptor`. 
+
+The method descriptor contains the details of the method, such as its value and whether it is writable or configurable.
+
+Inside the method decorator, you can modify the method descriptor and return it to modify the behavior of the method.
+
+```typescript
+// Define a method decorator that takes a boolean argument "show"
+function modifyMessage(show: boolean) {
+  // Return a decorator function that will be applied to the method being decorated
+  return function info(target: object, propertyKey: string, descriptor: any) {
+    if (show) {
+      console.log(target); // Log the target object (i.e. the class instance) to the console
+      console.log(propertyKey); // Log the property key (i.e. the method name) to the console
+      console.log(descriptor); // Log the descriptor object (which contains information about the method) to the console
+    } else {
+      // Replace the original method with a new method that just logs a message saying it's blocked
+      descriptor.value = function () {
+        console.log("Blocked method!");
+      };
+    }
+  };
+}
+
+// Define a parameter decorator that logs information about a method parameter
+function myProperty(
+  target: object,
+  propertyKey: string,
+  parameterIndex: number
+) {
+  console.log(
+    "This property is in the class " +
+      target.constructor.name + // Get the name of the class from the constructor property of the target object
+      " and the property's called: " +
+      propertyKey + // Log the property key (i.e. the method name)
+      " and the parameter index is: " +
+      parameterIndex // Log the index of the parameter being decorated
+  );
+}
+
+class Computer {
+  marca: string = "Asus";
+  // Decorate the "on" method with both "modifyMessage" and "myProperty" decorators
+  @modifyMessage(true) // Use the "modifyMessage" decorator with the "show" argument set to true
+  on(@myProperty message: string) {
+    // Use the "myProperty" decorator to log information about the "message" parameter
+    console.log("Turning on PC..");
+    console.log(message);
+  }
+}
+
+let pc = new Computer();
+pc.on("You're in Juan's PC");
+
+
+```
+# :arrow_forward: Generic Functions <a name="generic-functions"></a>
+
+Generic functions are functions that can work with a variety of data types. They are functions that are defined with one or more type parameters, which allows them to work with a wide range of data types, rather than being limited to a specific type.
+
+The type parameters are typically represented by a single uppercase letter (e.g., `T`, `U`, `V`), which is then used as a placeholder for the actual type when the function is called.
+
+Generic functions can be very useful when you need to write functions that are flexible enough to work with different types of data, without having to write separate functions for each data type.
+
+```typescript
+// This is a generic function named 'showGeneric' that takes a type parameter 'T'.
+// The function takes one argument called 'parameter' of type 'T'.
+function showGeneric<T>(parameter: T) {
+  return parameter;
+}
+
+// The type of 'T' in this case is inferred to be 'string'.
+console.log(showGeneric("Hello there").replace("Hello", "Goodbye"));
+
+// The type of 'T' in this case is inferred to be 'number'.
+console.log(showGeneric(24).toFixed(3));
+
+// The type of 'T' in this case is inferred to be 'boolean'.
+console.log(showGeneric(true).valueOf());
+```
 ## :arrow_forward: Getting started
 
 To get started with this project, simply clone this repository and take a deep look of what we have done.
